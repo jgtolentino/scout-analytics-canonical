@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
 import Overview from "./pages/Overview";
+import GeographicAnalytics from "./pages/GeographicAnalytics";
 import TransactionTrends from "./pages/TransactionTrends";
 import ProductMix from "./pages/ProductMix";
 import ConsumerBehavior from "./pages/ConsumerBehavior";
@@ -24,6 +25,7 @@ const App = () => (
         <Layout>
           <Routes>
             <Route path="/" element={<Overview />} />
+            <Route path="/geographic-analytics" element={<GeographicAnalytics />} />
             <Route path="/transaction-trends" element={<TransactionTrends />} />
             <Route path="/product-mix" element={<ProductMix />} />
             <Route path="/consumer-behavior" element={<ConsumerBehavior />} />
