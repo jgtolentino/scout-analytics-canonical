@@ -9,6 +9,7 @@ import Overview from "./pages/Overview";
 import TransactionTrends from "./pages/TransactionTrends";
 import ProductMix from "./pages/ProductMix";
 import ConsumerBehavior from "./pages/ConsumerBehavior";
+import ConsumerProfiling from "./pages/ConsumerProfiling";
 import RetailBotPage from "./pages/RetailBotPage";
 import NotFound from "./pages/NotFound";
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/transaction-trends" element={<TransactionTrends />} />
             <Route path="/product-mix" element={<ProductMix />} />
             <Route path="/consumer-behavior" element={<ConsumerBehavior />} />
+            <Route path="/consumer-profiling" element={<ConsumerProfiling />} />
             <Route path="/retail-bot" element={<RetailBotPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

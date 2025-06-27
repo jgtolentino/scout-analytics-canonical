@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BarChart3, TrendingUp, Package, Users, MessageSquare, Home } from 'lucide-react';
+import { BarChart3, TrendingUp, Package, Users, UserCheck, MessageSquare, Home } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const menuItems = [
@@ -24,6 +24,11 @@ const menuItems = [
     title: 'Consumer Behavior',
     icon: Users,
     href: '/consumer-behavior',
+  },
+  {
+    title: 'Consumer Profiling',
+    icon: UserCheck,
+    href: '/consumer-profiling',
   },
   {
     title: 'Retail Assistant',
