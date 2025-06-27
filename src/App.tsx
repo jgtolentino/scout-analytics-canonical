@@ -10,6 +10,8 @@ import GeographicAnalytics from "./pages/GeographicAnalytics";
 import GeographicDrilldown from "./pages/GeographicDrilldown";
 import FinancialMetrics from "./pages/FinancialMetrics";
 import StoreAnalytics from "./pages/StoreAnalytics";
+import ProductIntelligence from "./pages/ProductIntelligence";
+import CustomerIntelligence from "./pages/CustomerIntelligence";
 import TransactionTrends from "./pages/TransactionTrends";
 import ProductMix from "./pages/ProductMix";
 import ConsumerBehavior from "./pages/ConsumerBehavior";
@@ -32,6 +34,8 @@ const App = () => (
             <Route path="/geographic-drilldown" element={<GeographicDrilldown />} />
             <Route path="/financial-metrics" element={<FinancialMetrics />} />
             <Route path="/store-analytics" element={<StoreAnalytics />} />
+            <Route path="/product-intelligence" element={<ProductIntelligence />} />
+            <Route path="/customer-intelligence" element={<CustomerIntelligence />} />
             <Route path="/transaction-trends" element={<TransactionTrends />} />
             <Route path="/product-mix" element={<ProductMix />} />
             <Route path="/consumer-behavior" element={<ConsumerBehavior />} />
