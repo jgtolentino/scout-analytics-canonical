@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { PhilippinesMap } from '@/components/maps/PhilippinesMap';
+import { PhilippinesBubbleMap } from '@/components/maps/PhilippinesBubbleMap';
 import { regionalSalesData } from '@/data/philippinesRegions';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import { MapPin, TrendingUp, Store, Package } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const GeographicAnalytics = () => {
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
@@ -88,10 +90,23 @@ const GeographicAnalytics = () => {
 
       {/* Map or Table View */}
       {viewMode === 'map' ? (
-        <PhilippinesMap 
-          showStores={true}
-          onRegionClick={setSelectedRegion}
-        />
+        <Tabs defaultValue="choropleth" className="w-full">
+          <TabsList className="mb-4">
+            <TabsTrigger value="choropleth">Choropleth Map</TabsTrigger>
+            <TabsTrigger value="bubble">Bubble Map</TabsTrigger>
+          </TabsList>
+          <TabsContent value="choropleth">
+            <PhilippinesMap 
+              showStores={true}
+              onRegionClick={setSelectedRegion}
+            />
+          </TabsContent>
+          <TabsContent value="bubble">
+            <PhilippinesBubbleMap 
+              onStoreClick={(storeId) => console.log('Store clicked:', storeId)}
+            />
+          </TabsContent>
+        </Tabs>
       ) : (
         <Card className="p-6">
           <h3 className="text-lg font-semibold mb-4">Regional Performance Table</h3>
