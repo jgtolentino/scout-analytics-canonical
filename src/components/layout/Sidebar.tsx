@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BarChart3, TrendingUp, Package, Users, UserCheck, MessageSquare, Home, MapPin } from 'lucide-react';
+import { BarChart3, TrendingUp, Package, Users, UserCheck, MessageSquare, Home, MapPin, DollarSign, Store } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const menuItems = [
@@ -14,6 +14,16 @@ const menuItems = [
     title: 'Geographic Analytics',
     icon: MapPin,
     href: '/geographic-analytics',
+  },
+  {
+    title: 'Financial Metrics',
+    icon: DollarSign,
+    href: '/financial-metrics',
+  },
+  {
+    title: 'Store Analytics',
+    icon: Store,
+    href: '/store-analytics',
   },
   {
     title: 'Transaction Trends',
