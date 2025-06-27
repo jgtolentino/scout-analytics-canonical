@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
 import Overview from "./pages/Overview";
 import GeographicAnalytics from "./pages/GeographicAnalytics";
+import GeographicDrilldown from "./pages/GeographicDrilldown";
 import FinancialMetrics from "./pages/FinancialMetrics";
 import StoreAnalytics from "./pages/StoreAnalytics";
 import TransactionTrends from "./pages/TransactionTrends";
@@ -28,6 +29,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Overview />} />
             <Route path="/geographic-analytics" element={<GeographicAnalytics />} />
+            <Route path="/geographic-drilldown" element={<GeographicDrilldown />} />
             <Route path="/financial-metrics" element={<FinancialMetrics />} />
             <Route path="/store-analytics" element={<StoreAnalytics />} />
             <Route path="/transaction-trends" element={<TransactionTrends />} />
